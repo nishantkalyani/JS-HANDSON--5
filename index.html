@@ -111,6 +111,165 @@
         return S.length;
     };
     </pre></p><br>
+ <p><b>Question 6</b><br>
+      Find the Winner<br>
+  You are given a string S consisting of two letters A and D,where each character represent the winner of N games played between Aditya and Danish, where letter A represents the win of Aditya and letter D represents the win of Danish. <br>
+  You need to find out the that which player wins the maximum number of games or there is a draw between them.<br>
+  Note: You have to complete Game_Winner function. No need to take any input.
+  </p>
+  
+  <p><b>Ans</b><br><pre>
+    var Game_Winner = (S) => 
+    {
+     let countA = 0;
+     let countD = 0;
+     for(let value of S){
+       if(value === "A"){
+         countA++;
+       }else{
+         countD++;
+       }
+     }
+     if(countA === countD){
+       return "Draw";
+     }else if(countA > countD){
+       return "Aditya";
+     }else{
+       return "Danish";
+     } 
+   }
+  </pre></p><br>
+  
+  <p><b>Question 7</b><br>
+      Join Strings<br>
+  You are given two strings S and P, and your task is to concatenate them and return the concatenated string.<br>
+  Note: You have to complete joinStrings function. No need to take any input.
+  </p>
+  
+  <p><b>Ans</b><br><pre>
+      const joinStrings = (S, P) => 
+  {
+      let str=''
+      str = S+P;
+      return str
+  };
+  </pre></p><br>
+  
+  <p><b>Question 8</b><br>
+      Plaindrome Check<br>
+  You are given a string S, Your task is to check wether the given string is a 
+  Palindrome or not.<br>
+  A Palindrome is a string, which turnout same when read in reverse direction.
+  Example: "naman" is a Palindrome.<br>
+  String can contain both upppercase lowercase letters.<br>
+  Note: You have to complete Plain_Check function. No need to take any input.
+  </p>
+  
+  <p><b>Ans</b><br><pre>
+      var Palin_Check = (str) =>
+  {
+     let result= str.split('').reverse().join('');
+     if(result === str){
+       return 'True';
+     }
+     else
+     {
+       return 'False';
+     }
+  }
+  </pre></p><br>
+  
+  <p><b>Question 9</b><br>
+      Reverse the String<br>
+  You are given a string S, Your task is to Reverse the string.
+  String can contain both upppercase lowercase letters. <br>
+  Note: You have to complete Reverse_String function. No need to take any input.
+  </p>
+  
+  <p><b>Ans</b><br><pre>
+      var Reverse_String = (str) => 
+  {
+       return str.split("").reverse().join("");
+  };
+  </pre></p><br>
+  
+  <p><b>Question 10</b><br>
+      Match the Strings<br>
+  You are given two strings S1 and S2, Your task is to print YES if both strings are same else print NO.<br>
+  Note: You have to complete String_Match function. No need to take any input.
+  </p>
+  
+  <p><b>Ans</b><br><pre>
+      var String_Match = (S1,S2) => 
+  {
+        if(S1==S2){
+          return 'YES'
+        }
+        else{
+          return 'NO'
+        }
+  };
+  </pre></p><br>
+  
+  <p><b>Question 11</b><br>
+      String Replace<br>
+  You are given a string S, along with a pattern string and a text string. <br>
+  You need to repalce the pattern string in S to the text string.<br>
+  Note: You have to complete Replace function. No need to take any input.
+  </p>
+  
+  <p><b>Ans</b><br><pre>
+      var Replace = (S, pattern , text) => 
+  {
+        return S.replace(pattern,text)
+  };
+  </pre></p><br>
+  
+  <p><b>Question 12</b><br>
+      Split the String<br>
+  You are given a string S, Your task is to split the string with respect to spaces.<br>
+  Note: You have to complete Split_the_String function. No need to take any input.
+  </p>
+  
+  <p><b>Ans</b><br><pre>
+      var Split_the_string = (S) => 
+  {
+    const arr = S.split(' ');
+        return arr;
+  };
+  </pre></p><br>
+  
+  <p><b>Question 13</b><br>
+      Count the Vowels and Consonants<br>
+  You are given a string S containing both uppercase and lowercase letters. 
+  You need to find out the number of vowels and the number of consonants in the given string.<br>
+  Note: You have to complete Count_Vowels function and Count_Consonants function. No need to take any input.
+  </p>
+  
+  <p><b>Ans</b><br><pre>
+    {
+      count=0;
+       for(i=0;i< S.length;i++){
+         if(S[i]==='a' || S[i]==='e' || S[i]==='i'||S[i]==='o'||S[i]==='u'){
+          count++;
+          }
+        }
+     return count;
+      };
+          var Count_Consonants= (S) => 
+      {
+        count=0;
+      for(i=0;i< S.length;i++){
+    if(S[i] !=='a' && S[i] !=='e' && S[i] !=='i' && S[i] !=='o' && S[i] !=='u'){
+      count++;
+      } 
+      }
+    return count;
+                      
+     };
+    
+  </pre></p><br>
+ 
     
 </body>
 </html>
